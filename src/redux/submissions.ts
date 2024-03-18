@@ -40,15 +40,6 @@ const submissionsSlice = createSlice({
   },
 });
 
-// createSlice(): This function is used to create a slice of Redux state along with its corresponding action creators and reducers. It's typically provided by the @reduxjs/toolkit package.
-// name: "submissions": This sets the name of the slice to "submissions". This name is used to generate action types and selectors associated with this slice.
-// initialState: This is presumably a variable holding the initial state of the submissions slice. It's not explicitly shown in the provided code snippet, but it's assumed to be defined elsewhere in the code.
-// reducers: This is an object containing reducer functions. Each key represents the name of an action, and each value is a reducer function that handles the corresponding action.
-// addSubmission: This is a reducer function that handles the "addSubmission" action. It takes two parameters:
-// state: This represents the current state of the submissions slice.
-// action: This represents the action dispatched to add a submission. It contains a payload, which is presumably a new submission to be added.
-// (state, action) => { ... }: This is an arrow function representing the reducer. It takes the current state (state) and the dispatched action (action) as parameters.
-// state.submissions.push(action.payload): Inside the addSubmission reducer, this line adds the payload of the action (presumably a new submission object) to the submissions array in the Redux state. It modifies the state in place by pushing the new submission onto the existing array.
 
 export const {
   addSubmission,
