@@ -18,9 +18,6 @@ import { selectSubmissions } from "../redux/submissions";
 export default function Submissions() {
   const submissions = useAppSelector(selectSubmissions);
 
-  // Wrote this function that converts the time into the format requested in the assignment.
-
-
   function formatDateTime(now) {
     const date = new Date(now)
     let hours = date.getHours();
@@ -40,7 +37,6 @@ export default function Submissions() {
     const strSeconds = seconds.toString().padStart(2, '0');
 
     return `${month}/${day}/${year} ${strHours}:${strMinutes}:${strSeconds} ${ampm}`;
-
 
   }
   return (
@@ -67,8 +63,6 @@ export default function Submissions() {
             <TableBody>
               {submissions.map((submission) => {
                 const { listing } = submission;
-                // We call the formatDateTime function here with the submission.createdAt 
-                // property which converts the time submitted to the formatted time, which is then returned.
                 const createdAt = formatDateTime(submission.createdAt)
                 return (
                   <TableRow key={submission.id}>
