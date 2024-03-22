@@ -21,9 +21,7 @@ const initialState: ListingsSlice = {
 
     },
     mailingAddress: null,
-    // added the property extensionRequest to have a better way of tracking the form
     extensionRequest: ""
-
   }],
 };
 
