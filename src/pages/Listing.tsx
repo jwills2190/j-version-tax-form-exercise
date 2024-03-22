@@ -50,7 +50,7 @@ export default function Listing() {
       <Box>Listing was not found!</Box>
     );
   }
-  // Using Submission as the schema
+  
   const initialValues: Submission = {
     listing,
     reason: ""
@@ -64,8 +64,8 @@ export default function Listing() {
       errors.reason= "Please state a reason for requesting an extension.";
       console.log(errors)
     } 
-    // console.log(values)
-    return errors; // Return any validation errors
+    
+    return errors; 
   }
 
   // Used chatGPT to help write this function.
@@ -81,7 +81,7 @@ export default function Listing() {
         </Typography>
         <Formik
           initialValues={initialValues}
-          validate={validate} // Use the validate function for custom validation
+          validate={validate} 
           onSubmit={(value) => {
             requestExtension(value)
             .then((submittedData) => {
@@ -169,9 +169,6 @@ export default function Listing() {
                     name="listing.physicalAddress.zip"
                   />
                 </Grid>
-
-                {/* Following what has been done above I was able to follow along with the syntax and add the extension request box.  */}
-                {/* Added ErrorMessage from Formik */}
                 <Grid item xs={12}>
                   <AppField
                     label="Reason for Extension Request"
