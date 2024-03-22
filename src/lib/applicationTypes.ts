@@ -34,12 +34,7 @@ export type Submission = {
   reason?: string;
   extensionRequest?: string;
   submittedAt?: string;
-  // This part makes it a requirement. But I get an error when I remove the '?'
 }
 
-// Here is where I tried to find something from SO that I didn't end up implementing.
 
-// via stackoverflow
-// type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] }
-// type SubmissionWithReason = WithRequired<Submission, 'reason'>
 
