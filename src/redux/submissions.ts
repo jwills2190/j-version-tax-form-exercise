@@ -24,7 +24,6 @@ const initialState: SubmissionsSlice = {
 
       },
       mailingAddress: null,
-      // added the property extensionRequest to have a better way of tracking the form
       extensionRequest: ""
     },
   }],
@@ -35,6 +34,7 @@ const submissionsSlice = createSlice({
   initialState,
   reducers: {
     addSubmission: (state, action: PayloadAction<Submission>) => {
+      // Used Stack Overflow and chatGPT to help write line 38.
       state.submissions.push(action.payload);
     },
   },
