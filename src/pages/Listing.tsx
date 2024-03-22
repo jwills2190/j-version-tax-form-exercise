@@ -41,6 +41,7 @@ export default function Listing() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id = null } = useParams();
+  // Used chatGPT to help write line 45.
   const listing = useAppSelector((state) => selectClaimedListingById(state, id))
 
 
@@ -56,8 +57,7 @@ export default function Listing() {
   };
 
 
-  // Created the validate function which checks the extensionRequest property for values. If there are no values, it gives an error asking for a reason for requesting an extension. This comes from Formik.
-
+ 
   const validate = (values: Submission) => {
     const errors: Record<string, string> = {};
     if (values.reason === "" || !values.reason) {
@@ -68,7 +68,7 @@ export default function Listing() {
     return errors; // Return any validation errors
   }
 
-  // Wrote this function that takes the listing and apply dispatch which "triggers an event" in the application. Something happened, and we want the store to know about it.
+  // Used chatGPT to help write this function.
   const handleClaimListing = (listing) => {
     dispatch(addSubmission(listing));
   };
