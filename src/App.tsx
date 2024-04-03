@@ -10,6 +10,7 @@ import Listing from "./pages/Listing";
 import MyListings from "./pages/MyListings";
 import Submissions from "./pages/Submissions";
 import store from "./redux";
+import TestForm from "./pages/TestForm";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         path: "submissions",
         element: <Submissions />
       },
+      {
+        path:"test",
+        element: <TestForm />
+      }
     ],
   },
 ]);
